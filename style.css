@@ -9,7 +9,7 @@
     align-items: center;
     border: none;
 }
-.shahd1{
+.cc{
     background-color: white;
     align-items: center;
     border: none;
@@ -168,11 +168,16 @@ h5{
   
 }
 #grpic{
-    width: 90%  !important;
-    height: 100%  !important;
+    width: 70% ;
+    height: 50% ;
+}
+.pic{
+    width: 60%  ;
+    height: 50% ;
+    
 }
 .b{
-     padding: 5px;
+    padding: 5px;
     font-weight: bold;
     font-family: 'Nunito Sans', sans-serif;
 
@@ -189,12 +194,8 @@ h1{
     padding-top: 30px;
     margin-left: 30px;
 }
-.subcontainer2{
-    margin-left: 20px;
-}
-.shahd{
-    margin-left: -40px;
-}
+
+
 button{
     padding: 10px;
     box-shadow: 6px 6px 6px 6px #fafafa;
@@ -202,7 +203,8 @@ button{
     border-radius: 7px;  
 }
 .subcontainer2{
- margin-right: -50%;
+    margin-left: -50px;
+    width: 50%;
 }
 @media (max-width: 376px) 
 { 
@@ -288,9 +290,24 @@ button{
         margin-left: -10px;
     }
     .textbox2{
-        padding-top: -60px;
-        margin-left: -1px;
+        padding-top: -80px;
+        margin-left: -10px;
         margin-top: -20px;
     }
-
+    .subcontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .pic{
+        width: 130%  !important;
+        height: 70%  !important;
+        
+    }
+    .subcontainer2{
+        display: flex;
+        flex-direction: column ;
+        width: 100%  !important;
+        margin-left: 0px;
+        font-size: 11px;
+    }
 }
