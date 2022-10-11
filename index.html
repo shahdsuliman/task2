@@ -1,117 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-     <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
+<head>
+	<link rel="stylesheet" href="style.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,800&display=swap" rel="stylesheet">
+	<title>Where in the World!</title>
 </head>
-   
-  <body>
-    <div class="header">
+
+<body>
+<div class="header">
     <div class="d-flex">
-        <div class="p-2 w-100"><h2>Where in the world?</h2></div>
-        <button class="p-2 flex-shrink-1 darkmode">
-            <img src="photo\moon-outline.svg" id="moon">
+        <div class="p-2 w-100"><h3>Where in the world?</h3></div>
+        <button onclick="myFunction()" class="p-2 flex-shrink-1 dark-btn">
+            <img src="img\moon-outline.svg" id="moon">
                 Dark Mode 
          </button>
       </div>
       </div>
-      <div class="main">
-      <div class=" d-flex row" >
-        <div class="col-md-9">
-        <input type="text" id="Inputbox" placeholder="Search for a country...">
-         </div>
-        <div class="col-md-2 dropdown">  
-            <div class="dropdown-select">  
-                <span class="select">Filter by Region</span>
-                 <i class="fa fa-caret-down icon"></i>
-              </div>
-            <div class="dropdown-list">
-            <div class="dropdown-list-item">Africa</div>
-            <div class="dropdown-list-item">merica</div>
-            <div class="dropdown-list-item">Asia</div>
-            <div class="dropdown-list-item">Europe</div>
-            <div class="dropdown-list-item">Oceania</div>
-            </div>
-           </div>
+	
+    <div class="main">
+      <div class="conta">
+        <div class="d-flex row searchbar">
+		<div class="col-md-9"><input type="search" class="inputbox" placeholder="search for a country..." /> </div>
+		<div class="col-md-2 shahd">
+          
+          <select class="region form-select"> 
+             <option>Filter by Region</option>   
+              <option value="all">All</option>
+              <option value="africa">Africa</option>
+              <option value="americas">America</option>
+              <option value="oceania">Oceania</option>
+              <option value="asia">Asia</option>
+              <option value="europe">Europe</option>
+          </select>
+			</div>
         </div>
-      
-        <div class="d-flex align-items-stretch secondrow"  id="secondrow" >
-            <div class="col imageitem">
-                <a href="Germanypage.html">
-                <img src="photo\Flag_of_Waldeck_before_1830.svg" id="gerflag">
-                </a>
-                <h5>Germany</h5>
-                <p><span class="a">Population: </span>81,770,900</p>
-                <p><span class="a">Region: </span> Europe</p>
-                <p><span class="a">Capital: </span> Berlin </p>   
-                </div>
-
-            <div class="col imageitem">
-                <img src="photo\usa.svg" id="usaflag">
-              <h5>United States of America</h5>
-              <p><span class="a">Population: </span>323,947,000</p>
-              <p><span class="a">Region: </span> Americas</p>
-              <p><span class="a">Capital: </span> Washington.D.C.</p>
-            </div>
-
-           
-            <div class="col imageitem">  
-            <img  src="photo\Brazil.svg"id="brzflag">
-                  <h5 >Brazil</h5>
-                  <p><span class="a">Population: </span> 206,135,893</p>
-                  <p><span class="a">Region: </span>Americas</p>
-                  <p><span class="a">Capital: </span> Brasilia</p> 
-                 </div>
-            <div class="col imageitem"> 
-                <img src="photo\Iceland.svg" id="iclflag" >
-                  <h5 >Iceland</h5>
-                  <p><span class="a">Population: </span> 334,300</p>
-                  <p><span class="a">Region: </span>Europe</p>
-                  <p><span class="a">Capital: </span>Reykjavik</p> 
-                </div>
-          </div>
-          <div class="d-flex align-items-stretch "id="secondrow">
-            <div class="col imageitem">
-                <img src="photo\Afghanistan.svg"id="afflag">
-                <h5>Afghanistan</h5>
-                <p><span class="a">Population:</span> 27,657,145</p>
-                <p><span class="a">Region:</span> Asia</p>
-                <p><span class="a">Capital:</span> kabul</p>
-            </div>
-            <div class="col imageitem">
-                <img src="photo\Islands.svg"id="islandsflag" >
-         
-                <h5>Aland Islands</h5>
-                <p><span class="a">Population:</span> 28,875</p>
-                <p><span class="a">Region:</span> Europe</p>
-                <p><span class="a">Capital:</span> Mariehamn</p>
-            </div>
-            <div class="col imageitem">
-                <img src="photo\Albania.svg"id="Albaniaflag" >
-         
-                <h5>Albania</h5> 
-                <p><span class="a">Population: </span>2,886,026</p>
-                <p><span class="a">Region:</span> Europe</p>
-                <p><span class="a">Capital: </span>Tirana</p>
-
-            </div>
-            <div class="col imageitem">
-                <img src="photo\Algeria.svg" id="Algeriaflag" >
-      
-                <h5>Algeria</h5>
-                <p><span class="a">Population:</span> 40,400,000</p>
-                <p><span class="a">Region:</span> Africa</p>
-                <p><span class="a">Capital:</span> Algiers</p>
-            </div>
-          </div>
+        <div class="countries"></div>
     </div>
-    
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
