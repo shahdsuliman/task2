@@ -1,7 +1,10 @@
-const region = document.querySelector(".region");
-const searchCountry = document.querySelector("input[type='search']");
-
-const getcountry = async(event) => {
+const drop = document.querySelector(".drop");
+const dropdown = document.querySelector(".dropdown");
+const region = document.querySelectorAll(".Region");
+const search = document.querySelector(".inputbox");
+const Nname = document.getElementsByClassName("Nname");
+const regionc = document.getElementsByClassName("country-region");
+const getcountry = async (event) => {
 	const url = `https://restcountries.com/v3.1/all`
 	const countries = document.querySelector(".countries");
 	const countryArray = [];
@@ -24,45 +27,50 @@ const getcountry = async(event) => {
 				<div class="container">
 					<h5 class="Nname">${name.common}</h5>
 					<p><span class="a">Population: </span><span>${population}</span></p>
-					<p class="country-region"><span class="a Rname">Region: </span><span>${region}</span></p>
+					<p class="country-region"><span class="a Rname">Region:</span><span>${region}</span></p>
 					<p><span class="a">Capital: </span><span>${capital}</span></p>
 				</div></div>				
 				`
 			});
 		})
 };
-
 function myFunction() {
     var e= document.body;
     e.classList.toggle("dark-mode");
 }
 
 getcountry();
-
-searchCountry.addEventListener("input", (e) => {
-	const searchcountry = e.target.value;
-	const allcountries = Array.from(document.querySelectorAll(".country"));
-	allcountries.forEach(country => {
-		const keycountry = country.innerHTML.toLowerCase().trim();
-		if (keycountry == searchcountry) {
-			country.closest(".country").classList.remove("hide-card")
-		} else if (keycountry.includes(searchcountry)) {
-			country.closest(".country").classList.remove("hide-card")
-		} else {
-			country.closest(".country").classList.add("hide-card")
-		}
-	})
+dropdown.addEventListener("click", () => {
+	drop.classList.toggle("show")
+    console.log("halll");
 })
 
-const regionSelect = document.querySelector("select");
-regionSelect.onchange = (evt) => {
-	const allcountries = Array.from(document.querySelectorAll(".country-region span"));
-	allcountries.forEach(country => {
-		const keycountry = country.innerHTML.toLowerCase().trim();
-		if (keycountry == regionSelect.value || regionSelect.value === "all") {
-			country.closest(".country").classList.remove("hide-card")
-		} else {
-			country.closest(".country").classList.add("hide-card")
-		}
+region.forEach(element => {
+	element.addEventListener("click", () => {
+		console.log(element);
+		Array.from(regionc).forEach(elem => {
+			console.log(elem.innerText);
+			if (elem.innerText.includes(element.innerText) || element.innerText == "ALL") {
+				elem.parentElement.parentElement.style.display = "grid"
+			}
+			else {
+				elem.parentElement.parentElement.style.display = "none"
+			}
+		})
+	
 	})
-}
+});
+search.addEventListener("input", (e) => {
+	console.log(search.value.toString().toLowerCase())
+	Array.from(Nname).forEach(elem => {
+		if (elem.innerText.toLowerCase().includes(search.value.toLowerCase())) {
+			elem.parentElement.parentElement.style.display = "grid"
+			console.log("000000000000")
+		}
+		else {
+			elem.parentElement.parentElement.style.display = "none"
+			console.log("1111111111111111111")
+		}
+	});
+
+})

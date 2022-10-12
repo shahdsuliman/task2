@@ -22,19 +22,24 @@
 	
     <div class="main">
       <div class="conta">
-        <div class="d-flex row searchbar">
-		<div class="col-md-9"><input type="search" class="inputbox" placeholder="search for a country..." /> </div>
-		<div class="col-md-2 shahd">
+      <div class="d-flex row searchbar">
+		<div class="col-md-9">
+      <input type="search" class="inputbox" placeholder="search for a country..." />
+     </div>
+		<div class="col-md-2 dropdownAll">
           
-          <select class="region form-select"> 
-             <option>Filter by Region</option>   
-              <option value="all">All</option>
-              <option value="africa">Africa</option>
-              <option value="americas">America</option>
-              <option value="oceania">Oceania</option>
-              <option value="asia">Asia</option>
-              <option value="europe">Europe</option>
-          </select>
+          <div class="dropdown"> 
+             <p>Filter by Region</p>   
+              <button><i class="fa fa-chevron-down"></i></button>
+            </div>
+            <div class="drop  show">
+              <p class="Region">ALL</p>
+              <p class="Region">Africa</p>
+              <p class="Region">America</p>
+              <p class="Region">Oceania</p> 
+              <p class="Region">Asia</p> 
+              <p class="Region">Europe</p>  
+            </div>
 			</div>
         </div>
         <div class="countries"></div>

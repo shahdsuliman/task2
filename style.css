@@ -4,6 +4,7 @@
     align-items: center !important;
     font-size: 15px;
     background: var(--headerbgColor);
+   
 }
 
 #moon{
@@ -21,7 +22,7 @@
 .a {
     font-weight: bold;
     padding-left: 10%;
-    font-family: 'Nunito Sans', sans-serif;
+   
 }
 h5 {
     padding-left: 10%;
@@ -33,9 +34,7 @@ h5 {
 	
 	background: var(--imageitembgColor)!important;
 }
-.hide-card {
-    display: none;
-}
+
 .inputbox{
     background-image: url('img/search-outline.svg')!important;
     background-size: 20px 30px!important;
@@ -55,25 +54,51 @@ h5 {
     color: var(--fontcolor);
     
 }
-.select{
-    background: var(--selectgColor);
-    color: var(--fontcolor);
+.dropdownAll{
+    width: 200px;
+    position: relative;
+}
+.dropdown p{
+    letter-spacing: 0.5px;
+}
+.drop{
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    padding:  16px 14px 10px 20px !important;
+    width: 90%;
+    border-radius: 5px;
+    top:5rem;
+    font-family: 'Nunito Sans', sans-serif !important;
+    cursor: pointer;
+}
+.show{
+    display: none;
+}
+i{
+    cursor:pointer ;
+}
+.drop p{
+    margin: 5px 0;
+}
+.dropdown{
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content:space-between;
+    cursor: pointer;
+    padding:  16px 14px 10px 20px !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    
+
 }
 h3{
     margin-left: 38px;
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-weight: bold !important;
 }
-.option{
-    border-radius: 4px;
-    padding:  10px 20px 15px 17px;
-    margin-top: 10px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s linear,visibility 0.2s linear;
-    z-index:1;
-    background-color: white;
-    box-sizing: border-box !important;
-  
-}
+
 .countries{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
