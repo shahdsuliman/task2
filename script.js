@@ -4,21 +4,32 @@ const region = document.querySelectorAll(".Region");
 const search = document.querySelector(".inputbox");
 const Nname = document.getElementsByClassName("Nname");
 const regionc = document.getElementsByClassName("country-region");
-const getcountry = async (event) => {
-	const url = `https://restcountries.com/v3.1/all`
-	const countries = document.querySelector(".countries");
-	const countryArray = [];
-	await fetch(url)
+
+var a;
+
+var reg = 'ALL';
+
+var url;
+
+
+const queryContry =  () => {
+	
+	let countries = document.querySelector(".countries");
+
+	fetch(url)
 		.then(res => res.json())
 		.then(data => {
 			data.forEach(element => {
 
-				const { flags, name, population, region, capital } = element
-				countryArray.push(name.common);
+				let { flags, name, population, region, capital } = element;
 
-				const country = document.createElement("div");
-				country.classList.add("country")
-				country.classList.add("col")
+				let country = document.createElement("div");
+				country.classList.add("country");
+				country.classList.add("col");
+				
+				if (reg == "ALL" || reg == region) 
+				{
+					
 				countries.appendChild(country);
 
 				country.innerHTML = `
@@ -30,47 +41,95 @@ const getcountry = async (event) => {
 					<p class="country-region"><span class="a Rname">Region:</span><span>${region}</span></p>
 					<p><span class="a">Capital: </span><span>${capital}</span></p>
 				</div></div>				
-				`
+				`;	
+				
+				}
+				
 			});
-		})
+		});
+}
+
+const getAllcountry = () => {
+	
+	document.getElementById("couontryelements").innerHTML = "";
+	
+	 url = 'https://restcountries.com/v3.1/all';
+	 
+	 queryContry();
+	
+}
+
+const showcountry =  () => {
+	
+	document.getElementById("couontryelements").innerHTML = "";
+	
+    url =`https://restcountries.com/v3.1/name/${a}`;
+	
+	 queryContry();
+	
+}	
+
+
+const getcountry = (event) => {
+	getAllcountry();
 };
+
+
 function myFunction() {
     var e= document.body;
     e.classList.toggle("dark-mode");
-}
+};
 
-getcountry();
+
+getAllcountry();
+
 dropdown.addEventListener("click", () => {
 	drop.classList.toggle("show")
-    console.log("halll");
-})
+});
 
 region.forEach(element => {
 	element.addEventListener("click", () => {
-		console.log(element);
-		Array.from(regionc).forEach(elem => {
-			console.log(elem.innerText);
-			if (elem.innerText.includes(element.innerText) || element.innerText == "ALL") {
-				elem.parentElement.parentElement.style.display = "grid"
-			}
-			else {
-				elem.parentElement.parentElement.style.display = "none"
-			}
-		})
+		
+		a = search.value.toString().toLowerCase();
+		
+		console.log(reg);
+		
+		reg = element.innerHTML;
+		
+		console.log(reg);
+			 
+		if (a.length === 0) {
+				getAllcountry();
+		}
+		
 	
-	})
-});
-search.addEventListener("input", (e) => {
-	console.log(search.value.toString().toLowerCase())
-	Array.from(Nname).forEach(elem => {
-		if (elem.innerText.toLowerCase().includes(search.value.toLowerCase())) {
-			elem.parentElement.parentElement.style.display = "grid"
-			console.log("000000000000")
-		}
-		else {
-			elem.parentElement.parentElement.style.display = "none"
-			console.log("1111111111111111111")
-		}
+	else {
+	
+		showcountry();
+		
+		 }
+	
 	});
+});
 
-})
+search.addEventListener("input", (e) => {
+	
+	a = search.value.toString().toLowerCase();
+	
+	console.log(a);
+		 
+	if (a.length === 0 ) {
+		getAllcountry();
+	}
+	else {
+		
+		showcountry();
+		console.log("i");
+		
+	}
+	
+	
+
+
+
+});
