@@ -1,97 +1,44 @@
 .header{
-    padding: 10px 30px 10px 60px;
-    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    align-items: center !important;
-    font-size: 15px;
     background: var(--headerbgColor);
-   
+}
+.body{
+    font-family: 'Nunito Sans', sans-serif ;
+    background-color: #fafafa;
 }
 
 #moon{
-    width:9%;
-    padding-right: 5px;
+    width:19px;
+    height: 19px;
 }
-.main{
-    align-items: center;
-    padding: 50px 10px 10px 60px;
-    width: 100%;
-}
-.searchbar {
-	margin-bottom: 4rem;
-}
-.a {
-    font-weight: bold;
-    padding-left: 10%;
-   
-}
-h5 {
-    padding-left: 10%;
-    padding-bottom: 5px;
-    padding-top: 30px;
-    font-weight: bold !important;
-}
-.card {
-	
+.card {	
 	background: var(--imageitembgColor)!important;
 }
 
 .inputbox{
-    background-image: url('img/search-outline.svg')!important;
-    background-size: 20px 30px!important;
-    background-repeat: no-repeat!important;
-    background-position: center left !important;
-    background-position-x: 5%!important;
-    width:40%;
-    height:60px;
-    padding:  8px 30px 8px 60px;
-    align-items: center;
-    background-position: 5% 50%; 
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    margin-left: 49px;
-    border-radius: 7px;
     background: var(--InputboxbgColor);
+    background-image: url('img/search-outline.svg');
+    background-size: 20px 30px;
+    background-repeat: no-repeat;
+    background-position:20px center;
+    border-radius: 7px;
     color: var(--fontcolor);
-    
+    padding-left:60px ;
 }
-.dropdownAll{
-    width: 200px;
-    position: relative;
-}
-.dropdown p{
-    letter-spacing: 0.5px;
-}
+
 .drop{
     position: absolute;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    padding:  16px 14px 10px 20px !important;
-    width: 90%;
     border-radius: 5px;
-    top:5rem;
-    font-family: 'Nunito Sans', sans-serif !important;
-    cursor: pointer;
+     z-index: 1;
+    color: var(--fontcolor);
+    background: var(--dropbgColor);
 }
 .show{
     display: none;
 }
-i{
-    cursor:pointer ;
-}
-.drop p{
-    margin: 5px 0;
-}
-.dropdown{
-    width: 100%;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content:space-between;
-    cursor: pointer;
-    padding:  16px 14px 10px 20px !important;
-    font-family: 'Nunito Sans', sans-serif !important;
-    
 
+.dropdown{
+ cursor: pointer;
+ border-radius: 5px;
 }
 h3{
     margin-left: 38px;
@@ -99,30 +46,18 @@ h3{
     font-weight: bold !important;
 }
 
-.countries{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    padding: 20px;
-    margin-top: 20px !important;
-    margin-right:110px !important;
-
-}
-
 .card{
-    min-height: 250px !important;
-    border: none;
-    box-shadow:  0 4px 8px 0 rgba(28, 23, 23, 0.1);
-    border-radius: 7px;
-    width: 290px !important;
+    border-radius: 8px;
     overflow: hidden !important; 
     background: var(--imageitembgColor);
-    margin: 40px !important;
+     width: 90%;
+    object-fit: cover;
 }
 .card img{
-    height: 220px;
+    height: 180px;
     width: 100%;
     object-fit: cover;
-    overflow: hidden; 
+   
 }
 .darkmode{
     background-color: white;
@@ -140,7 +75,16 @@ h3{
     --backbuttonbgColor: #2b3945;
     --ccbgColor: #2b3945;
     --selectgColor: #2b3945;
-  
+    --dropbgColor: #2b3945;
+}
+
+.countrydetails{
+    visibility: hidden;
+    
+}
+
+.detailspic img{
+ width: 100%;
 }
 
 .dark-btn {
@@ -149,32 +93,16 @@ h3{
     color: var(--fontcolor);
 }
 
+#aaaa{
+  visibility: hidden;
+}
+
 @media (max-width: 376px) 
-{ 
-    .header{
-        font-size: 10px !important;
-        align-items: center;
-      
-    }
-    h3{
-        font-size: 12px!important;
-        margin-left:-50px ;
-    }
- 
-    .countries{
-    margin-left:-75px !important ;
-    }
+{
+
 .dark-btn{
 margin-right: -40px;
 }
-.inputbox{
-    width: 100%;
-    margin-left: -20px;
-    height:50px;
-}
-.shahd{
-    margin-top: 30px !important;
-    width: 60% !important;
-    margin-left: -20px;
-}
+
+
 }
