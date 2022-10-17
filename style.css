@@ -3,7 +3,7 @@
 }
 .body{
     font-family: 'Nunito Sans', sans-serif ;
-    background-color: #fafafa;
+    background-color: #fafafa ;
 }
 
 #moon{
@@ -12,8 +12,28 @@
 }
 .card {	
 	background: var(--imageitembgColor)!important;
+ 
+}
+.country{
+    cursor: move;
 }
 
+.favimg{
+    border-radius: 5px ;
+}
+.favlist{
+    border-color:#27ae60;
+}
+#favorit{
+    background: var(--favoritbgColor);
+}
+.back img{
+height: 20px;
+width: 20px;
+}
+.back a{
+    color: inherit;
+}
 .inputbox{
     background: var(--InputboxbgColor);
     background-image: url('img/search-outline.svg');
@@ -28,9 +48,8 @@
 .drop{
     position: absolute;
     border-radius: 5px;
-     z-index: 1;
-    color: var(--fontcolor);
-    background: var(--dropbgColor);
+    z-index: 1;
+    background-color: white;
 }
 .show{
     display: none;
@@ -39,6 +58,13 @@
 .dropdown{
  cursor: pointer;
  border-radius: 5px;
+ background: var(--dropdownbgColor);
+ color: var(--fontcolor);
+}
+.arrowdown{
+    width:19px;
+    height: 19px;
+
 }
 h3{
     margin-left: 38px;
@@ -50,8 +76,11 @@ h3{
     border-radius: 8px;
     overflow: hidden !important; 
     background: var(--imageitembgColor);
-     width: 90%;
     object-fit: cover;
+}
+
+.opdrag{
+opacity: .5;
 }
 .card img{
     height: 180px;
@@ -59,6 +88,11 @@ h3{
     object-fit: cover;
    
 }
+.favpic{
+    height: 180px;
+    width: 100%;
+}
+
 .darkmode{
     background-color: white;
     align-items: center;
@@ -76,11 +110,8 @@ h3{
     --ccbgColor: #2b3945;
     --selectgColor: #2b3945;
     --dropbgColor: #2b3945;
-}
-
-.countrydetails{
-    visibility: hidden;
-    
+   --dropdownbgColor: #2b3945;
+   --favoritbgColor:#2b3945;
 }
 
 .detailspic img{
@@ -93,16 +124,18 @@ h3{
     color: var(--fontcolor);
 }
 
-#aaaa{
-  visibility: hidden;
-}
+
 
 @media (max-width: 376px) 
 {
 
+ h1{
+    font-size: 7px;
+ }
 .dark-btn{
 margin-right: -40px;
 }
-
-
+.star{
+    background: unset;
+}
 }
